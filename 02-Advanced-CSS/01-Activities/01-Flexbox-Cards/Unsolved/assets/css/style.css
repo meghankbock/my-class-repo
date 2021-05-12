@@ -35,10 +35,15 @@ main h2 {
 
 .flex-container {
   /* TODO: Enter your CSS here */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* flex child */
 .flex-item {
+  display: flex;
   /* makes each one 45%, putting 10% between each element on the page */
   width: 45%;
   /* rounded corners */
@@ -68,6 +73,12 @@ main h2 {
 /* for text area inside of flex item */
 .flex-item span {
   /* TODO: Enter your CSS here */
+  width: 100%;
+  margin-top: auto;
+  background-color: gray;
+  color: darkgray;
+  padding: 10px 5px;
+  text-align: center;
 }
 
 footer {
