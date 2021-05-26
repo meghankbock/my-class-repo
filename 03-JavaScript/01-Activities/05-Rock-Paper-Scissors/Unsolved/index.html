@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-top: 20%">
+      Let's play Rock Paper Scissors!<br />Refresh to play again!
+    </h1>
+    <script type="text/javascript">
+      // TODO: Create an array of the three game choices (Rock, Paper, or Scissors).
+      var play = function () {
+        var gameChoices = ["r", "p", "s"];
+
+        // TODO: Create variables to hold the number of wins, losses, and ties. They start at 0.
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        for (var i = 0; i < 3; i++) {
+          // TODO: Randomly choose a choice from the gameChoices array. This is the computer's turn.
+          var computerTurn =
+            gameChoices[Math.floor(Math.random() * gameChoices.length)];
+
+          // TODO: Collect the user's response and convert to lower case. This is the user's turn.
+          var userTurn = window.prompt("please enter r s or p.");
+          userTurn = userTurn.toLowerCase();
+
+          // TODO: Create the game logic to run if the user chooses a valid game choice
+          if (userTurn === "r" || userTurn === "p" || userTurn === "s") {
+            alert("The computer chose " + computerTurn);
+            if (
+              (userTurn === "r" && computerTurn === "p") ||
+              (userTurn === "p" && computerTurn === "s") ||
+              (userTurn === "s" && computerTurn === "r")
+            ) {
+              losses++;
+              alert("You have " + losses + " loss(es)");
+            } else if (userTurn === computerTurn) {
+              ties++;
+              alert("You have " + ties + " tie(s)");
+            } else {
+              wins++;
+              alert("You have " + wins + " win(s)");
+            }
+          } else if (userTurn !== "r" || userTurn !== "p" || userTurn !== "s") {
+            alert("you entered an incorrect value.");
+            i--;
+          }
+        }
+        alert("Wins: " + wins + "\nTies: " + ties + "\nLosses: " + losses);
+        if (wins >= 2 || losses >= 2) {
+          console.log("game ended");
+          return true;
+        }
+        else if (wins + losses + ties == 3) {
+          alert("there was no winner, so you must play again");
+        }
+      };
+      //else window.prompt("you entered an incorrect value. please enter r s or p.");
+
+      // TODO: When the game is over, alert the final total to the user. We can use the \n character to make a line break.
+
+      var initiate = false;
+
+      do {
+        initiate = play();
+      } while (!initiate);
+
+      if (initiate) {
+        alert("the game has ended.");
+      }
+
+      /*while (initiate) {
+        initiate = play();
+        if(initiate){
+        alert("there was no winner, so you must play again");
+        }
+      }*/
+
+      /*if(initiate) {
+        alert("there was no winner, so you must play again");
+        play();
+      }*/
+    </script>
+  </body>
+</html>

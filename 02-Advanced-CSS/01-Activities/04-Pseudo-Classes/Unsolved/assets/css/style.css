@@ -27,6 +27,27 @@ li {
   width: 135px;
 }
 
+li::before {
+  content:"🥔";
+}
+
+li:hover::before {
+  content:"❤️";
+}
+
+li a:hover {
+  font-weight: bold;
+  text-shadow: 2px 0px 2px rgba(2, 245, 245, .5);
+}
+
+li:nth-child(odd) {
+  background-color: royalblue;
+}
+
+.intro::first-line {
+  font-weight: bold;
+}
+
 /* TODO: Add your code to change the style of the list items when hovering over them */
 
 /* TODO: Add your code to add a potato emoji to the list item */
