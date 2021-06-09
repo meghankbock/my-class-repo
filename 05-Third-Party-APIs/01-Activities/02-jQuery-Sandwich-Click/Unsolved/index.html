@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Sandwich Click</title>
+  </head>
+
+  <body>
+    <h1>Click to Eat Sandwich</h1>
+    <!-- Create three button elements each with an id and corresponding content for our sandwiches -->
+    <button id="peanut-butter-jelly">Peanut Butter & Jelly</button>
+    <button id="grilled-cheese">Grilled Cheese</button>
+    <button id="roast-beef">Roast Beef</button>
+
+    <!-- BONUS: Render an image for each click event. You will need to declare an empty `<div>` with an id of `#image-div` for this -->
+      <div id="image">
+      </div>
+
+    <!-- Link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      // Create three global variables for tracking the number of sandwiches eaten
+      var peanutButterJelly = 0;
+      var grilledCheese = 0;
+      var roastBeef = 0;
+
+      // YOUR CODE HERE
+      //
+
+      // Here we create various "on click" events which capture clicks
+      $("#peanut-butter-jelly").on("click", function() {
+        // Inside each click event is the code to create an alert, update the counter, and show the updated count.
+        peanutButterJelly += 1;
+        $("#image").html("<img src='https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/2018_grilled-peanut-butter-and-jelly_20336_760x580.jpg?ext=.jpg' />");
+        alert("Peanut Butter Jelly Time: " + "you've eaten " + peanutButterJelly + " sandwiches.");
+      });
+
+      $("#grilled-cheese").on("click", function() {
+        grilledCheese += 1;
+        $("#image").html("<img src='https://hips.hearstapps.com/hmg-prod/images/grilled-cheese-horizontal-jpg-1522266016.jpg' />");
+        alert("Grilled Cheese: " + "you've eaten " + grilledCheese + " sandwiches.");
+      });
+
+      $("#roast-beef").on("click", function() {
+        roastBeef += 1;
+        $("#image").html("<img src='https://www.royrogersrestaurants.com/sites/default/files/styles/menu_item/public/roast-beef-sandwich.jpg?itok=f7S6aXdf' />");
+        alert("Roast Beef: " + "you've eaten " + roastBeef + " sandwiches.");
+      });
+
+    </script>
+  </body>
+</html>

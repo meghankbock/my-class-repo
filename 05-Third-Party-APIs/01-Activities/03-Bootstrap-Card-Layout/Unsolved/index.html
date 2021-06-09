@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bootstrap Card Layout Activity</title>
+
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Create rows and columns to match the given design -->
+    <div class="container">
+      <div class="row">
+        <!-- Add a heading "About Me" -->
+        <div class="col-8">
+          <div class="col-4">
+            <h1>About Me</h1>
+          </div>
+
+          <!-- Add an image -->
+          <div class="row">
+            <div class="col-3 img-placeholder"></div>
+
+            <!-- Add a paragraph of text -->
+            <div class="col-9">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                commodi vel eaque! Voluptatum sint sit quibusdam aut hic
+                explicabo earum ullam nemo temporibus, provident fuga,
+                voluptates nam neque quo minima. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Aperiam labore debitis animi
+                earum. Suscipit sed, rem ipsa labore nihil ex quidem accusantium
+                consequatur odit a, recusandae impedit quasi nemo ad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Add a Card -->
+        <div class="col-4">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

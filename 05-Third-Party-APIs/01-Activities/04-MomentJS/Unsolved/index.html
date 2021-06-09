@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Moment JS Exercises</title>
+  </head>
+
+  <body>
+    <h1>✨ Open the console to see the magic ✨</h1>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- Import Moment.js here -->
+
+    <script>
+      var randomDate = '02/23/1999';
+      // Convert the `randomDate` to the "MM/DD/YYYY" format using `moment()`
+      var convertedDate = moment(randomDate).format("MM/DD/YY");
+      // Log `convertedDate` into the console
+      //
+      console.log('convertedDate: ' + convertedDate);
+
+      // Convert `convertedDate` into three other date formats of your choice using `.format()`
+      // Log them into the console
+      convertedDate = moment(randomDate).format("MMMM DD, YYYY");
+      console.log('convertedDate: ' + convertedDate);
+
+      convertedDate = moment(randomDate).format("dddd MMMM DD, YYYY");
+      console.log('convertedDate: ' + convertedDate);
+
+      // Calculate the time in years, months, days between today and the `convertedDate` using `.toNow()` and `.diff()`
+      // Log them into the console
+      var diff;
+
+      diff = moment().diff(convertedDate,'years');
+      console.log('diff years: ' + diff);
+
+      diff = moment().diff(convertedDate,'months');
+      console.log('diff months: ' + diff);
+
+      diff = moment().diff(convertedDate,'days');
+      console.log('diff days: ' + diff);
+
+      // Calculate the number of days between the `convertedDate` and 02/14/2001
+      // Log it into the console
+      diff = moment("02/14/2001").diff(convertedDate,'years');
+      console.log('diff years: ' + diff);
+
+      diff = moment("02/14/2001").diff(convertedDate,'months');
+      console.log('diff months: ' + diff);
+
+      diff = moment("02/14/2001").diff(convertedDate,'days');
+      console.log('diff days: ' + diff);
+
+      // Determine what day of the week and what week of the year the `convertedDate` falls on
+
+      convertedDate = moment(randomDate).format("dddd DDD W");
+      console.log('convertedDate: ' + convertedDate);
+      // Log them into the console
+      //
+    </script>
+  </body>
+</html>
