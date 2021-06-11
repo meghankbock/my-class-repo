@@ -7,16 +7,18 @@ fetch(
     return response.json();
   })
   .then(function(response) {
+    //console.log(response);
+    var imgUrl = response.data.image_url;
     // Use 'querySelector' to get the ID of where the GIF will be displayed
-    // YOUR CODE HERE
+    var responseEl = document.querySelector("#response-container");
     //
     // Create an '<img>' element
-    // YOUR CODE HERE
+    var imgEl = document.createElement("img");
     //
     // Set that element's 'src' attribute to the 'image_url' from our Giphy API response
-    // YOUR CODE HERE
-    //
+    imgEl.setAttribute("src",imgUrl);
+    console.log(imgEl);
     // Append the '<img>' element to the page
-    // YOUR CODE HERE
+    responseEl.appendChild(imgEl);
     //
   });

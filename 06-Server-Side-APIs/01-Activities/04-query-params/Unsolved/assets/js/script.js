@@ -1,11 +1,12 @@
 function myFunction() {
   var searchTerm = document.getElementById('searchTerm').value;
   // Create a variable to hold the value of rating
-  // YOUR CODE HERE
-  //
+  var rating = document.querySelector("#rating").value;
+  var endPoint = "https://api.giphy.com/v1/gifs/";
+  var apiKey = "HvaacROi9w5oQCDYHSIk42eiDSIXH3FN";
+
   fetch(
-    'https://api.giphy.com/v1/gifs/search?q=' +
-      searchTerm +
+    endPoint + "search?q=" + searchTerm + "&rating=" + rating + "&api_key=" + apiKey
       // Add the rating parameter
       // YOUR CODE HERE
       //
@@ -15,11 +16,14 @@ function myFunction() {
       return response.json();
     })
     .then(function(response) {
-      console.log(response.data[0]);
+      var length = response.data.length;
+
+      var random = Math.floor(Math.random() * (length));
+      console.log(response.data[random]);
       var responseContainerEl = document.querySelector('#response-container');
       responseContainerEl.innerHTML = '';
       var gifImg = document.createElement('img');
-      gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+      gifImg.setAttribute('src', response.data[random].images.fixed_height.url);
       responseContainerEl.appendChild(gifImg);
     });
 }
