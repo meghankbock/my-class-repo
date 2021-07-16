@@ -13,8 +13,10 @@ Character.prototype.isAlive = function() {
     if (this.hitpoints > 0) {
         console.log(this.name + " is still alive!");
         console.log("\n-------------\n");
+        return true;
     } else {
         console.log(this.name + " has died!");
+        return false;
     }
 };
 
