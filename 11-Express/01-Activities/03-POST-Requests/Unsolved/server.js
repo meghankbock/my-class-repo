@@ -58,7 +58,15 @@ app.get('/api/characters/:character', (req, res) => {
 
 // Create a POST route that adds new characters
 //
-// YOUR CODE HERE
+app.post('/api/characters', (req, res) => {
+  const newCharacter = req.body;
+
+  console.log(newCharacter);
+
+  characters.push(newCharacter);
+
+  res.json(newCharacter);
+});
 //
 
 // Listener

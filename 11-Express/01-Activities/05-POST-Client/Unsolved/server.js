@@ -45,7 +45,11 @@ app.get('/', (req, res) => {
 
 // Create an `/add` route that returns `add.html`
 //
-// YOUR CODE HERE
+app.get('/add', (req, res) => {
+  //
+  res.sendFile(path.join(__dirname, 'add.html'));
+  //
+});
 //
 
 app.get('/api/characters', (req, res) => {
