@@ -1,0 +1,29 @@
+<h1>Library Books</h1>
+
+<h2>Books you've already read</h2>
+
+<ul>
+  {{#each books}}
+    {{#if read}}
+      <li>
+        <p>Title: {{title}}</p>
+        <p>Read: {{read}}</p>
+        <p>Author: {{author}}</p>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Books you haven't read yet</h2>
+
+<ul>
+  {{#each books}}
+    {{#unless read}}
+      <li>
+        <p>Title: {{title}}</p>
+        <p>Read: {{read}}</p>
+        <p>Author: {{author}}</p>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
