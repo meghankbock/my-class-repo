@@ -22,6 +22,7 @@ function getResults() {
 }
 
 function newTodoSnippet(res) {
+  console.log(res);
   for (let i = 0; i < res.length; i++) {
     let data_id = res[i]['_id'];
     let title = res[i]['title'];

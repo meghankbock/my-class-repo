@@ -46,6 +46,7 @@ const UserSchema = new Schema(
 // Create a virtual property `username` that's computed from the front part of `email` before the `@` symbol.
 UserSchema.virtual('username').get(function() {
   return this.email.slice(this.email.indexOf('@') + 1);
+  //return this.email.slice(0, this.email.indexOf('@'));
 });
 //
 
